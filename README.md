@@ -1,53 +1,70 @@
-# Установка
+# Getting Started with Create React App
 
-Перед тем, как запускать сервер, необходимо установить все зависимости.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Для этого выполни команду `yarn`.
+## Available Scripts
 
-# Настройка
+In the project directory, you can run:
 
-1. Когда установка зависимостей завершилась, необходимо создать файл `.env`, вставив в этот новый файл всё содержимое из файла `.env.example`.
-2. Теперь необходимо зарегистрироваться на сайте https://mongodb.com и скопировать ссылку на свою MongoDB базу данных.
-3. Внутри файла `.env` есть строка `MONGODB_URI=XXX`, вместо `XXX` вставь ссылку на свою БД.
+### `npm start`
 
-# Запуск
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Для того чтобы запустить сам сервер, выполни команду `yarn start`. Теперь по адресу `http://localhost:5656` будет доступен сервер.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Ниже перечислены все доступные роуты.
+### `npm test`
 
-# API документация (Apiary)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-По адресу https://blogapi22.docs.apiary.io/ доступна вся документация по всем роутам с подробным объяснением того, что и как делает каждый роут.
+### `npm run build`
 
-Учитывай тот момент, что для создания статьи или комментария, тебе необходимо быть авторизованным. После произведения авторизации, бэкенд тебе в ответ вернёт `token`. Его необходимо передавать во все защищённые роуты внутри headers в свойство `Authorization`.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Вот пример запроса:
-```js
-axios.post(
-  `http://localhost:5656/posts`,
-  {
-    title: "Заголовок статьи",
-    text: "........",
-  },
-  {
-    headers: {
-      "Authorization": "ТУТ_ТОКЕН"
-    }
-  }
-);
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Как пользоваться Apiariy?
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-1. Если ты хочешь тестировать запросы через сервис Apiary, то необходимо там переключится на "Use Browser", чтобы запросы не отправлялись через их сервис. Если не поменять, то всегда будет выдавать ошибку.
-    ![](http://joxi.ru/L21a3a5cwMkjq2.png) <br/> <br/>
-2. Чтобы отправить запрос, достаточно нажать на "Call Resource"
-    ![](http://joxi.ru/zANLQLMt197o0m.png)
-3. Если необходимо передать POST-параметры в запросе, то нажимаем на "Body" и указываем там JSON с параметрами.
-    ![](http://joxi.ru/BA0ZaZQC1Dxbxm.png)
+### `npm run eject`
 
-## Apiary сложный, есть ли что-то проще?
-Да, можно скачать Postman (https://www.postman.com/) и через него отправлять запросы. 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Или же в своём приложении самим писать Axios-запросы и тестировать (но этот вариант не самый лёгкий).
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
